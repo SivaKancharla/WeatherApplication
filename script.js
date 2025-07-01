@@ -11,7 +11,7 @@ const search = document.getElementById("searchIcon");
 let apiKey="db278d3916accf99f9eda1a4aae947a5";
 let api;
 
-search.addEventListener("click", e =>{
+search.addEventListener("click", () =>{
     // if user pressed enter btn and input value is not empty
     if(inputField.value != ""){
         requestApi(inputField.value);
