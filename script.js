@@ -6,14 +6,13 @@ locationBtn = inputPart.querySelector("button"),
 weatherPart = wrapper.querySelector(".weather-part"),
 wIcon = weatherPart.querySelector("img"),
 arrowBack = wrapper.querySelector("header i");
-arrowBack = wrapper.querySelector("header i");
-const search = document.getElementById("searchIcon");
+
 let apiKey="db278d3916accf99f9eda1a4aae947a5";
 let api;
 
-search.addEventListener("click", () =>{
+inputField.addEventListener("keyup", e =>{
     // if user pressed enter btn and input value is not empty
-    if(inputField.value != ""){
+    if(e.key == "Enter" && inputField.value != ""){
         requestApi(inputField.value);
     }
 });
